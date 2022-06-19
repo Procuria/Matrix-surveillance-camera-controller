@@ -19,7 +19,7 @@ Make your chosen installer executable. Then move the install script that you're 
 
 ```
 cd Matrix-surveillance-camera-controller
-chmod +x ./installers/r_pu_4_installer.sh
+chmod +x ./installers/r_pi_4_installer.sh
 mv ./installers/r_pi_4_installer.sh .
 ```
 
