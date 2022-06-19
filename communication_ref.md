@@ -1,6 +1,6 @@
 # Communications reference
 
-All messages have 3 parameters, type, content, requestor_id. By default requestor_id will be "0" and represents a message for all remote clients
+All messages have 3 parameters, type, content, requestor_id. By default, requestor_id will be "0" and represents a message for all remote clients
 
 ## Types of messages FROM camera hub
 
@@ -50,7 +50,7 @@ Example:
 
 
 ### list-recording-reply:
-content = string. Upon user request to list out stored video thumbnails from a specified date range, the output will be a json containing the 'date_range' which was provided in the original request, and an array of the pairs of file paths to the found video thumbnails, and their time stamps. These thumbnail file paths can then be used to request the videos.
+content = string. Upon user request to list out stored video thumbnails from a specified date range, the output will be a JSON containing the 'date_range' which was provided in the original request, and an array of the pairs of file paths to the found video thumbnails, and their time stamps. These thumbnail file paths can then be used to request the videos.
 
 Example:
 
@@ -87,7 +87,7 @@ Example:
 Expected reply is the thumbnail file directed to the client specified in the requestor_id field that matches the thumbnail or an error. 
 
 ### record-video:
-Note on this, it triggers a simulated motion detection for the specified duration in seconds. So it'll appear to everyone as if its a motion detection event video. Maximum duration is 300 seconds, and a minimum of 1 second.
+Note on this, it triggers a simulated motion detection for the specified duration in seconds. So it'll appear to everyone as if it's a motion detection event video. Maximum duration is 300 seconds, and a minimum of 1 second.
 
 content = string. The content needs to contain the camera and the duration comma separated. like "1,20" will be camera 1, 20 seconds.
 
