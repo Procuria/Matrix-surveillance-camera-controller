@@ -10,8 +10,8 @@ echo "© Copyright (c) 2022 Open Source Videos Capstone Project 2022"
 echo "GitHub original Repo -> https://github.com/Open-Source-Videos/Matrix-surveillance-camera-controller"
 sleep 2 
 echo 
-echo "Let's start with updating your system an installing the base components"
-echo "for MotionEye"
+echo "Let's start with updating your system and installing"
+echo "the base components for MotionEye"
 sleep 2
 sudo apt-get update -y
 sudo apt-get install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
