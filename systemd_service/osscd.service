@@ -1,0 +1,9 @@
+[Unit]
+Description=Open Surveillance Camera Daemon
+
+[Service]
+ExecStart=/usr/bin/bash /var/lib/ossc_client/ossc_client_service.sh start
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

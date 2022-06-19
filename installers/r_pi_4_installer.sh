@@ -70,8 +70,14 @@ sudo cp -v ./config.cfg /var/lib/ossc_client
 sudo cp -v ./ossc_client_service.sh /var/lib/ossc_client
 chmod -v +x /var/lib/ossc_client/ossc_client_service.sh
 
+sudo cp -v ./sysetmd_service/osscd.service 
+systemctl daemon-reload
+systemctl enable osscd.service 
+
 ## getting local ip 
 local_ip="$(hostname -I)"
+
+## Post Install Disclaimer
 echo
 echo 
 echo "Completed install script"
@@ -94,7 +100,7 @@ echo "2. Run --> python3 /var/lib/ossc_client/ossc_client.py <-- to configure yo
 echo "   You'll need a RoomID in which the user you'll configure is member."
 echo
 echo
-echo "3. Restart the daemon with --> systemctl restart osscd"
+echo "3. Restart the daemon with --> systemctl start osscd"
 echo 
 echo "That's it, you're good to go"
 echo "For more info checkout the readme and communication_ref.md"
