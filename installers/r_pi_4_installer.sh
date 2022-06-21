@@ -70,7 +70,7 @@ sudo cp -v ./config.cfg /var/lib/ossc_client
 sudo cp -v ./ossc_client_service.sh /var/lib/ossc_client
 chmod -v +x /var/lib/ossc_client/ossc_client_service.sh
 
-sudo cp -v ./sysetmd_service/osscd.service 
+sudo cp -v ./systemd_service/osscd.service /etc/systemd/system/ 
 systemctl daemon-reload
 systemctl enable osscd.service 
 
